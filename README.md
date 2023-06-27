@@ -5,7 +5,7 @@ Telegram bot on golang using ![cobra-cli](https://github.com/spf13/cobra-cli)
 Installation instructions:
 - Fork or clone repo to your github account
 - Open project in GitHub codespaces
-- To add more functions to bot install cobra-cli tool by `go install github.com/spf13/cobra-cli`
+- To add more functions to bot install cobra-cli tool by `go install github.com/spf13/cobra-cli@latest`
 - Create telegram bot and generate token by 'BotFather'
 - Export token to environment variable `export TELE_TOKEN=<our token>`
 - Start bot `./kbot start/`
