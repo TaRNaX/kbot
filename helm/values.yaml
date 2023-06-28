@@ -3,7 +3,7 @@ image:
   registry: ghcr.io/tarnax
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.1-712d121"
+  tag: "v1.0.1-a7e596e"
   arch: amd64
   os: linux
 secret:
