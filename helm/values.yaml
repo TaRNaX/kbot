@@ -1,17 +1,14 @@
 replicaCount: 1
-
 image:
   registry: ghcr.io/tarnax
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.1-22fca2a"
-  arch: "amd64"
-  os: "linux"
-
+  tag: "v1.0.1-b53fa29"
+  arch: ""
+  os: ""
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
   key: "token"
-  
 securityContext:
   privileged: true
