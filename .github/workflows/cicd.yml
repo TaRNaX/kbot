@@ -5,6 +5,10 @@ on:
     branches:
       - develop
 
+env:
+  TARGETARCH: amd64
+  TARGETOS: linux
+
 jobs:
   ci:
     name: CI
@@ -30,7 +34,7 @@ jobs:
           REGISTRY: ${{ github.actor }}
         run: make image push TARGETOS=${TARGETOS} TARGETARCH=$TARGETARCH
       - name: Clean
-        run: make clean TARGETARCH=$TARGETARCH TARGETARCH=$TARGETARCH
+        run: make clean TARGETARCH=$TARGETARCH TARGETOS=${TARGETOS}
   cd:
     name: CD
     needs: ci
