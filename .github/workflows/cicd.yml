@@ -28,8 +28,9 @@ jobs:
         env:
           APP: "kbot"
           REGISTRY: ${{ github.actor }}
-        run: make image push
-
+        run: make image push TARGETOS=${TARGETOS} TARGETARCH=$TARGETARCH
+      - name: Clean
+        run: make clean TARGETARCH=$TARGETARCH TARGETARCH=$TARGETARCH
   cd:
     name: CD
     needs: ci
@@ -44,8 +45,8 @@ jobs:
       - uses: mikefarah/yq@master
         with:
           cmd: yq -i ".image.tag=strenv(VERSION) |
-            .image.os=strenv(OS) | 
-            .image.arch=strenv(ARCH)" helm/values.yaml
+            .image.os=strenv(TARGETOS) | 
+            .image.arch=strenv(TARGETARCH)" helm/values.yaml
     
       - run: |
           git config user.name github-actions
