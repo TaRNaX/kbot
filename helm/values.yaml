@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  registry: ghcr.io/tarnax
+  repository: ghcr.io/tarnax
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1.0.1-a7e596e"
