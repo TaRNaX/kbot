@@ -1,20 +1,16 @@
 replicaCount: 1
-
 image:
   repository: tarnax
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.1-9be2c38"
-  arch: "amd64"
-  os: "linux"
-
+  tag: "v1.0.8-b55d26e"
+  arch: ""
+  os: ""
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
   key: "token"
-
 securityContext:
   privileged: true
-
 service:
   port: 80
