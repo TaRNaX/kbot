@@ -37,7 +37,7 @@ agent any
         stage('build') {
             steps {
                 echo 'BUILD EXECUTION STARTED'
-                sh 'make build'
+                sh 'make build TARGETARCH=${ARCH} TARGETOS=${OS}'
             }
         }
         
@@ -45,7 +45,7 @@ agent any
             steps {
                 script{
                     echo 'BUILD EXECUTION STARTED'
-                    sh 'make image' 
+                    sh 'make image TARGETARCH=${ARCH} TARGETOS=${OS}' 
                 }
             }
         }  
@@ -54,7 +54,7 @@ agent any
             steps {
                 script{
                     docker.withRegistry('', 'dockerhub') {
-                        sh 'make push' 
+                        sh 'make push TARGETARCH=${ARCH} TARGETOS=${OS}' 
                     }
                 }
             }
