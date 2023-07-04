@@ -10,6 +10,7 @@ secret:
   name: "kbot"
   env: "TELE_TOKEN"
   key: "token"
+  secret: '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'
 securityContext:
   privileged: true
 service:
