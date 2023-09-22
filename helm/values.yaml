@@ -3,7 +3,7 @@ image:
   repository: tarnax
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.8-94b52cd"
+  tag: "v1.0.9-94b52cd"
   arch: "amd64"
   os: "linux"
 secret:
